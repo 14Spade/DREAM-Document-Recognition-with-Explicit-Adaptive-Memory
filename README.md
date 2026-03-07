@@ -1,6 +1,6 @@
 # DREAM: Document Recognition with Explicit Adaptive Memory (CVPR 2026)
 
-[![Paper](https://img.shields.io/badge/Paper-PDF-red.svg)](#) [![Dataset](https://img.shields.io/badge/Dataset-DreamDoc-blue.svg)](#) This repository contains the official dataset and codebase for our CVPR 2026 paper **DREAM**. 
+[![Paper](https://img.shields.io/badge/Paper-PDF-red.svg)](#) [![Dataset](https://img.shields.io/badge/Dataset-DreamDoc-blue.svg)](https://drive.google.com/drive/folders/1nA5FXrleUefUy9vM40__jypc5TwO6PBx?usp=sharing) This repository contains the official dataset and codebase for our CVPR 2026 paper **DREAM**. 
 
 ## 📖 About DREAM
 
@@ -27,7 +27,7 @@ To thoroughly evaluate document recognition models on complex layouts and divers
 ### 📥 Download Links
 You can download the full DreamDoc dataset from the following platforms:
 
-* ☁️ **[Google Drive](#)**
+* ☁️ **[Google Drive](https://drive.google.com/drive/folders/1nA5FXrleUefUy9vM40__jypc5TwO6PBx?usp=sharing)**
 
 ### 📂 Data Structure
 After downloading and extracting the dataset, you will find the images organized by category, with all text annotations consolidated in a single JSON file. The directory structure is as follows:
