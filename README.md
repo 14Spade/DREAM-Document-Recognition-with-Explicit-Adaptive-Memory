@@ -20,9 +20,9 @@ To address this, we propose **DREAM**, which augments document recognition model
 To thoroughly evaluate document recognition models on complex layouts and diverse stylistic patterns, we introduce **DreamDoc**, a comprehensive bilingual (Chinese-English) dataset constructed specifically for this work.
 
 ### ✨ Dataset Highlights
-**Scale & Diversity**: Contains 4,908 high-quality document images (4,800 for training, 108 for testing) sourced from real-world scenarios. The dataset covers 7 distinct categories: listed-company announcements, handwritten notes, slide pages, primary/secondary school textbooks, university textbooks, magazines, and newspapers.
-**Complexity**: Features challenging layouts including single-column, double-column, complex image-text mixed pages, and diverse font styles, which heavily rely on explicit structural context.
-**High-Quality Transcripts**: Annotations are generated via a semi-automatic pipeline. Initial OCR results from Chandra are manually verified and corrected by trained annotators to ensure content integrity, correct reading order, and accurate handling of dense typesetting and complex layouts.
+* **Scale & Diversity**: Contains 4,908 high-quality document images (4,800 for training, 108 for testing) sourced from real-world scenarios. The dataset covers 7 distinct categories: listed-company announcements, handwritten notes, slide pages, primary/secondary school textbooks, university textbooks, magazines, and newspapers.
+* **Complexity**: Features challenging layouts including single-column, double-column, complex image-text mixed pages, and diverse font styles, which heavily rely on explicit structural context.
+* **High-Quality Transcripts**: Annotations are generated via a semi-automatic pipeline. Initial OCR results from Chandra are manually verified and corrected by trained annotators to ensure content integrity, correct reading order, and accurate handling of dense typesetting and complex layouts.
 
 ### 📥 Download Links
 You can download the full DreamDoc dataset from the following platforms:
