@@ -28,11 +28,12 @@ To thoroughly evaluate document recognition models on complex layouts and divers
 You can download the full DreamDoc dataset from the following platforms:
 
 * ☁️ **[Google Drive](#)**
-* ### 📂 Data Structure
+
+### 📂 Data Structure
 After downloading and extracting the dataset, you will find the images organized by category, with all text annotations consolidated in a single JSON file. The directory structure is as follows:
 
 ```text
-my_omnidoc_for_train_rename/
+DreamDoc/
 ├── announce_plus/      # Additional announcements
 ├── announcement/       # Listed-company announcements
 ├── jiaocai/            # University textbooks
@@ -43,7 +44,8 @@ my_omnidoc_for_train_rename/
 ├── yiwujiaoyu/         # Primary/secondary school textbooks
 ├── addnoise.py         # Utility script for adding noise/augmentations
 └── label.json          # Ground truth transcripts and metadata for all images
-  
+  ```
+
 ## 🚀 Release Status
 
 To facilitate future research, we are releasing the comprehensive **DreamDoc** dataset and the associated project codebase. The repository is currently being updated to ensure full reproducibility and transparency.
