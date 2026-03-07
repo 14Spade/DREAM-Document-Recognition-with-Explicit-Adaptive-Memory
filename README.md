@@ -50,7 +50,7 @@ DreamDoc/
 
 To facilitate future research, we are releasing the comprehensive **DreamDoc** dataset and the associated project codebase. The repository is currently being updated to ensure full reproducibility and transparency.
 
-- [*] DreamDoc Dataset
+- [x] DreamDoc Dataset
 - [ ] Model Architecture Definitions (`DREAM` module)
 - [ ] Inference Scripts
 - [ ] Training Scripts
