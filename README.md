@@ -2,6 +2,12 @@
 
 [![Paper](https://img.shields.io/badge/Paper-PDF-red.svg)](#) [![Dataset](https://img.shields.io/badge/Dataset-DreamDoc-blue.svg)](https://drive.google.com/drive/folders/1nA5FXrleUefUy9vM40__jypc5TwO6PBx?usp=sharing) This repository contains the official dataset and codebase for our CVPR 2026 paper **DREAM**. 
 
+**Tianqi Zhao**<sup>1</sup>, **Di Wu**<sup>1</sup>, **Liangrui Peng**<sup>1</sup>, **Yifan Huang**<sup>1</sup>, **Kemeng Zhao**<sup>1</sup>, **Shuo Li**<sup>1</sup>, **Zhiyu Li**<sup>1</sup>, **Yizhu Wang**<sup>1</sup>, **Borui Jiang**<sup>2</sup>, **Yuyang Li**<sup>2</sup>
+
+<sup>1</sup> Tsinghua University, <sup>2</sup> Huawei Noah's Ark Lab
+
+*(Note: The codebase is currently being updated for full public release. We are progressively uploading the core modules and scripts.)*
+
 ## 📖 About DREAM
 
 Large multimodal models (LMMs) have shown great promise in document recognition, but they typically rely on implicit modeling where knowledge is entangled within network weights. This makes them struggle with complex, unseen layouts and hard to update. 
