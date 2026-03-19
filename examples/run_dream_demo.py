@@ -142,17 +142,22 @@ def run_visualization_demo():
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(16, 5))
     
     slice_idx = 50 
-    # Displaying the 'Striped' input pattern
+    
+    # Left Plot: Input Visual Query with axes
     ax1.imshow(feat_16[0, :slice_idx, :slice_idx].cpu().numpy(), cmap='viridis', aspect='auto')
     ax1.set_title("Input Visual Query (16x16)")
-    ax1.axis('off')
+    ax1.set_xlabel("Feature Dimension")
+    ax1.set_ylabel("Token Index (Top 50)")
+    ax1.axis('on') # Ensure axes are visible
     
-    # Displaying how the memory has retrieved and reconstructed the pattern
+    # Middle Plot: Retrieved Memory with axes
     ax2.imshow(retrieved_16[0, :slice_idx, :slice_idx].cpu().detach().numpy(), cmap='viridis', aspect='auto')
     ax2.set_title(f"Retrieved Memory (Step {steps})")
-    ax2.axis('off')
+    ax2.set_xlabel("Feature Dimension")
+    ax2.set_ylabel("Token Index (Top 50)")
+    ax2.axis('on') # Ensure axes are visible
     
-    # Quantifying the convergence: Sparsity vs. Cosine Similarity
+    # Right Plot: Training Dynamics (Undeclared/Original code maintained)
     ax3.plot(loss_history, label='Sparsity Loss', color='red', marker='o', markersize=4)
     ax3.set_ylabel("Sparsity Loss", color='red')
     ax3.tick_params(axis='y', labelcolor='red')

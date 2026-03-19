@@ -8,6 +8,8 @@
 
 *(Note: The codebase is currently being updated for full public release. We are progressively uploading the core modules and scripts.)*
 
+---
+
 ## 📖 About DREAM
 
 Large multimodal models (LMMs) have shown great promise in document recognition, but they typically rely on implicit modeling where knowledge is entangled within network weights. This makes them struggle with complex, unseen layouts and hard to update. 
@@ -16,10 +18,34 @@ To address this, we propose **DREAM**, which augments document recognition model
 
 ### Key Features:
 * **Memory Retrieval & Consolidation:** Local document regions sparsely attend to a few prototypes (e.g., image borders, tilted text) to retrieve explicit structural context. The memory is continuously updated via an EMA strategy during training.
-**Hierarchical Multiscale Design:** Independent prototype memory banks operate across different spatial resolutions to capture global layouts, mid-level components, and fine-grained styles[cite: 51, 180, 183].
-* **Plug-and-Play Module:** DREAM can be seamlessly integrated into various encoder-decoder architectures. [cite_start]We validated it on both large multimodal document recognition (using Qwen 0.5B decoder) and handwriting text line recognition tasks.
+* **Hierarchical Multiscale Design:** Independent prototype memory banks operate across different spatial resolutions to capture global layouts, mid-level components, and fine-grained styles.
+* **Plug-and-Play Module:** DREAM can be seamlessly integrated into various encoder-decoder architectures. We validated it on both large multimodal document recognition (using Qwen 0.5B/3B decoders) and handwriting text line recognition tasks.
 * **Sparsity Regularization:** We introduce an entropy-based loss to encourage sparse and non-collapsing prototype assignments.
 
+---
+
+## 💻 Codebase Structure & Integration
+
+The repository is modularly designed to allow seamless integration into existing vision-language pipelines. 
+
+### 1. Core Algorithm (`dream_core/`)
+The standalone implementation of the DREAM memory architecture.
+* `prototype_memory_module.py`: The explicit memory bank featuring FP32-isolated Read (MHA retrieval) and Write (EMA consolidation) mechanisms.
+* `multiscale_memory.py`: The central dispatcher that aligns, triggers, and fuses hierarchical visual features (16x16, 32x32, 64x64).
+* `loss.py`: The sparsity entropy loss function designed to prevent memory collapse.
+
+### 2. Model Integration (`got_integration/`)
+Templates and modified architectures for injecting DREAM into GOT-OCR 2.0 (Qwen-based).
+* `vary_b_multi.py`: A heavily modified Vision Tower that extracts and outputs three hierarchical feature scales simultaneously.
+* `got_qwen_dream.py`: The integration template for Qwen2, showcasing the exact `[DREAM INJECTION]` locations.
+* `got_qwen3_0.6B_dream.py`: Upgrade GOT's decoder to Qwen3-0.6B.
+
+### 3. Verification & Visualization (`examples/`)
+Tools to diagnose the memory data flow and visualize adaptation dynamics.
+* `test_dream_core_module.py`: A lightweight diagnostic script to verify multi-scale alignment and synchronization across all memory banks.
+* `run_dream_demo.py`: A high-fidelity visualization simulation that demonstrates how memory prototypes "carve" and adapt to structural archetypes over time.
+
+---
 
 ## 🗂️ DreamDoc Dataset
 
@@ -50,13 +76,14 @@ DreamDoc/
 ├── yiwujiaoyu/         # Primary/secondary school textbooks
 ├── addnoise.py         # Utility script for adding noise/augmentations
 └── label.json          # Ground truth transcripts and metadata for all images
-  ```
 
 ## 🚀 Release Status
 
 To facilitate future research, we are releasing the comprehensive **DreamDoc** dataset and the associated project codebase. The repository is currently being updated to ensure full reproducibility and transparency.
 
 - [x] DreamDoc Dataset
-- [ ] Model Architecture Definitions (`DREAM` module)
-- [ ] Inference Scripts
+- [x] Model Architecture Definitions (dream_core)
+- [x] Integration Architectures for GOT-OCR (got_integration)
+- [x] Diagnostic and Visualization (examples)
+- [ ] Inference Scripts and Model Weights
 - [ ] Training Scripts
