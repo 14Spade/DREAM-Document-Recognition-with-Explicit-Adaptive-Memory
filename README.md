@@ -1,6 +1,6 @@
 # DREAM: Document Recognition with Explicit Adaptive Memory (CVPR 2026)
 
-[![Paper](https://img.shields.io/badge/Paper-PDF-red.svg)](#) [![Dataset](https://img.shields.io/badge/Dataset-DreamDoc-blue.svg)](https://drive.google.com/drive/folders/1nA5FXrleUefUy9vM40__jypc5TwO6PBx?usp=sharing) 
+[![Paper](https://img.shields.io/badge/Paper-PDF-red.svg)](./Zhao_DREAM_Document_Recognition_with_Explicit_Adaptive_Memory_CVPR_2026_paper.pdf) [![Dataset](https://img.shields.io/badge/Dataset-DreamDoc-blue.svg)](https://drive.google.com/drive/folders/1nA5FXrleUefUy9vM40__jypc5TwO6PBx?usp=sharing)
 
 **Tianqi Zhao**<sup>1</sup>, **Di Wu**<sup>1</sup>, **Liangrui Peng**<sup>1</sup>, **Yifan Huang**<sup>1</sup>, **Kemeng Zhao**<sup>1</sup>, **Shuo Li**<sup>1</sup>, **Zhiyu Li**<sup>1</sup>, **Yizhu Wang**<sup>1</sup>, **Borui Jiang**<sup>2</sup>, **Yuyang Li**<sup>2</sup>
 
